@@ -15,6 +15,8 @@ Declare a constant variable myName and set it's value to your name. Log myName i
 */
 
 /* Add your code here */
+const myName: string = "Armands";
+console.log(myName);
 
 /*
 Declare a variable yourAge and set it's value to 100.
@@ -22,6 +24,9 @@ Change the value of yourAge to your age on the next line. Log yourAge in console
 */
 
 /* Add your code here */
+let myAge: number = 100;
+myAge = 23;
+console.log(myAge);
 
 /*
 Declare a constant variable favouriteColor and set it's value to your favourite color.
@@ -31,6 +36,7 @@ Understand why it isn't working and delete it.
 */
 
 /* Add your code here */
+const favouriteColor: string = "Zila";
 
 /*
 Declare a variable favouriteFood and don't set it's value. Type string.
@@ -39,6 +45,9 @@ Log favouriteFood in console.
 */
 
 /* Add your code here */
+let favoriteFood: string;
+favoriteFood = "Pankūkas";
+console.log(favoriteFood);
 
 /*
 Challenge 2 ----------------------------------------------------------------------------------
@@ -50,6 +59,8 @@ Declare a constant variable fiftyNineAsNumber and set it's value to fiftyNine co
 */
 
 /* Add your code here */
+const fiftyNine: number = 59;
+const fiftyNineAsNumber: number = Number(fiftyNine);
 
 /*
 Declare a constant variable food and set it's value to a random food item
@@ -57,6 +68,8 @@ Declare a constant variable randomItem and set it's value to a random item
 */
 
 /* Add your code here */
+const food: string = "Apple";
+const randomItem: string = "TV";
 
 /*
 Declare a constant variable randomSentence and
@@ -67,6 +80,9 @@ Log randomSentence in console.
 */
 
 /* Add your code here */
+const randomSentence: string =
+  "My favotite food is " + food + " and i bought a new " + randomItem;
+console.log(randomSentence);
 
 /*
 Declare a constant variable randomSentenceWithLiterals
@@ -77,6 +93,8 @@ Log randomSentenceWithLiterals in console.
 */
 
 /* Add your code here */
+const randomSentenceWithLiterals: string = `My favorite food is ${food} and I bought a new ${randomItem}`;
+console.log(randomSentenceWithLiterals);
 
 /*
 Declare a constant variable importantMessage and set it's value to "WATER THE FLOWERS!".
@@ -86,6 +104,9 @@ Log unimportantMessage in console.
 */
 
 /* Add your code here */
+const importantMessage: string = "WATER THE FLOWERS!";
+const unimportantMessage = importantMessage.toLowerCase().replace("!", " ");
+console.log(unimportantMessage);
 
 /*
 Declare a constant variable story
@@ -96,6 +117,9 @@ Log shortSentence in console.
 */
 
 /* Add your code here */
+const story: string = "The quick brown fox jumps over the lazy dog";
+const shortStory: string = story.slice(35, 43);
+console.log(shortStory);
 
 /*
 Challenge 3 ----------------------------------------------------------------------------------
@@ -120,6 +144,18 @@ type string and set it's value to result formatted as a string;
 */
 
 /* Add your code here */
+const bigNumber: number = 307.98765;
+const twelve: number = 12;
+let thirdChallengeResult: number;
+console.log(bigNumber - twelve);
+console.log(bigNumber * twelve);
+thirdChallengeResult = Math.floor(bigNumber);
+console.log(thirdChallengeResult);
+thirdChallengeResult = Math.round(bigNumber);
+console.log(thirdChallengeResult);
+thirdChallengeResult = bigNumber.toFixed(2);
+console.log(thirdChallengeResult);
+thirdChallengeResultAsString: string = String;
 
 /*
 Challenge 4 ----------------------------------------------------------------------------------
@@ -132,6 +168,9 @@ Log isWizard in console.
 */
 
 /* Add your code here */
+const isHuman: boolean = true;
+const isWizard: boolean = !isHuman;
+console.log(isWizard);
 
 /*
 Declare a constant variable five and set it's value to 5.
@@ -142,6 +181,10 @@ Log isElevenPlusFiveLargerThanTen in console.
 */
 
 /* Add your code here */
+const five: number = 5;
+const eleven: number = 11;
+const isElevennPlusFiveLargerThanTen = eleven + five > 10;
+console.log(isElevennPlusFiveLargerThanTen);
 
 /*
 Declare a constant variable boringStory and set it's value to "This is a boring story".
@@ -151,6 +194,10 @@ Log boringStory in console formatted to a boolean value that indicates whether b
 */
 
 /* Add your code here */
+const boringStory: string = "This is boring story";
+console.log(!!boringStory);
+console.log(!boringStory);
+console.log(!!boringStory.includes("Cat"));
 
 /*
 Challenge 5 ----------------------------------------------------------------------------------
@@ -165,6 +212,12 @@ and is equal to "Copper door knobs are self-disinfecting.".
 */
 
 /* Add your code here */
+const randomFact: string = "Copper door knobs are self-disinfecting";
+console.log(randomFact.length);
+console.log(randomFact > 5 || randomFact > 20);
+console.log(
+  randomFact.length === 40 && "Copper door knobs are self-disinfecting"
+);
 
 /*
 Challenge 6 ----------------------------------------------------------------------------------
@@ -180,6 +233,14 @@ Else console log "Someone else should drive..."
 */
 
 /* Add your code here */
+const hasDriversLicense: boolean = true;
+const hasGoodVision: boolean = true;
+const isTired: boolean = false;
+if (hasDriversLicense && hasGoodVision && !isTired) {
+  console.log("Sarah is able to drive");
+} else {
+  console.log("Someone else should drive...");
+}
 
 /*
 Challenge 7 ----------------------------------------------------------------------------------
@@ -197,6 +258,7 @@ if (isAwesome) {
 }
 
 /* Add your code here */
+isAwesome ? console.log("Awesome") : console.log("Is not awesome");
 
 /*
 Challenge 8 ----------------------------------------------------------------------------------
@@ -216,3 +278,13 @@ Console log myAlphabet.
 */
 
 /* Add your code here */
+let myAlphabet: string[] = ["A", "B", "C", "D", "E", "F", "G"];
+console.log(myAlphabet);
+console.log(myAlphabet.join(" "));
+console.log(myAlphabet.reverse());
+console.log(myAlphabet[0]);
+console.log(myAlphabet[myAlphabet.length - 1]);
+myAlphabet = [...myAlphabet, "Z"];
+console.log(myAlphabet);
+myAlphabet.push("X");
+console.log(myAlphabet);
